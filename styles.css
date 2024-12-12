@@ -1,3 +1,7 @@
+:root {
+  --accent-color-bg: rgb(179, 218, 255);
+}
+
 .dm-serif-text-regular {
   font-family: "DM Serif Text", serif;
   font-weight: 400;
@@ -14,4 +18,227 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+header,
+section,
+footer {
+  padding: 1rem;
+}
+
+h1 {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+p,
+div.img-placeholder,
+span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header.about-me {
+  display: flex;
+  border: 1px soild black;
+  align-items: center;
+}
+
+.skewed-bg-top {
+  background-color: var(--accent-color-bg);
+  height: 10%;
+  padding: 0.75rem 0.75rem 1rem 1rem;
+}
+
+.skewed-bg {
+  background-color: var(--accent-color-bg);
+  height: 25%;
+  transform: skewY(-10deg);
+  box-shadow: 10px 10px 5px 0px #989898;
+  padding: 0.75rem 0.75rem 1rem 1rem;
+}
+
+.skewed-bg-top,
+.skewed-bg {
+  width: -webkit-fill-available;
+  z-index: -1;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+.about-me-wrapper {
+  display: grid;
+  padding: 0.75rem 0.75rem 1rem 1rem;
+  height: min-content;
+  box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.4);
+  background-color: white;
+}
+
+div.header-icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 8px;
+  font-size: 1.5rem;
+}
+
+.portrait-wrapper {
+  display: flex;
+  position: relative;
+  text-align: center;
+}
+
+.portrait-wrapper > h1 {
+  position: absolute;
+  bottom: 0%;
+  left: 10%;
+  background-color: white;
+  padding: 2px 8px;
+}
+
+.portrait-wrapper > picture > img {
+  width: 400px;
+  height: auto;
+  box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+div.portfolio-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  justify-items: center;
+}
+
+div.img-placeholder {
+  width: 300px;
+  height: 200px;
+  display: grid;
+  text-align: center;
+  align-content: center;
+  background-color: rgb(255, 146, 139);
+}
+
+div.portfolio-project > div.icon-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  justify-items: center;
+  height: min-content;
+  gap: 0.5rem;
+  place-self: end;
+}
+
+div.portfolio-project {
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  justify-items: center;
+  box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 0.25rem;
+}
+
+section.my-work,
+header.about-me {
+  margin-bottom: 4rem;
+}
+
+/*Center items in grid*/
+footer {
+  background-color: var(--accent-color-bg);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+}
+
+div.footer-contents-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+span.phone,
+span.email {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: start;
+  gap: 8px;
+}
+
+div.footer-contents-wrapper > div.icon-wrapper {
+  font-size: 1.5rem;
+}
+
+footer > picture > img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1200px) and (min-width: 600px) {
+  /*Header*/
+  header.about-me {
+    display: inline;
+    margin: 0;
+  }
+
+  .portrait-wrapper {
+    float: left;
+    margin-right: 2rem;
+  }
+
+  div.about-me-wrapper {
+    display: block;
+    padding: 4rem 2rem;
+    margin: 2rem;
+  }
+
+  div.about-me-wrapper > h1 {
+    text-align: end;
+  }
+
+  /*Portfolio*/
+  div.portfolio-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, min-content);
+    gap: 2rem;
+  }
+
+  div.footer-contents-wrapper {
+    align-items: center;
+    text-align: center;
+  }
+
+  div.footer-contents-wrapper > div.icon-wrapper {
+    font-size: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+/*Portfolio switch to mobile layout before other contents*/
+@media (max-width: 800px) {
+  div.portfolio-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  header.about-me {
+    flex-direction: column;
+  }
 }
