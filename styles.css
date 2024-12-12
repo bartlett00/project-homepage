@@ -146,7 +146,6 @@ header.about-me {
   margin-bottom: 4rem;
 }
 
-/*Center items in grid*/
 footer {
   background-color: var(--accent-color-bg);
   display: grid;
@@ -180,7 +179,6 @@ footer > picture > img {
 }
 
 @media (max-width: 1200px) and (min-width: 600px) {
-  /*Header*/
   header.about-me {
     display: inline;
     margin: 0;
@@ -201,7 +199,6 @@ footer > picture > img {
     text-align: end;
   }
 
-  /*Portfolio*/
   div.portfolio-wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -229,7 +226,6 @@ footer > picture > img {
   }
 }
 
-/*Portfolio switch to mobile layout before other contents*/
 @media (max-width: 800px) {
   div.portfolio-wrapper {
     grid-template-columns: 1fr;
